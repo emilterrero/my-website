@@ -10,6 +10,7 @@
     color: white;
     padding: 10px 0;
     width: 100vw;
+    height: auto;
     min-height: 100vh;
     display: flex;
     flex-flow: column;
@@ -74,10 +75,6 @@
     background-color: #003366;
 }
 
-.navbar button:active {
-    padding: 20px;
-}
-
 .icon {
     height: 20px;
 }
@@ -99,13 +96,18 @@
 
 .projects {
     width: 100vw;
+    height: auto;
     text-align: center;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-areas: 
+    "a b c";
 }
 
 .project-card {
-    height: 25vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 10px;
 }
 
 .project-info h3 {
@@ -133,17 +135,6 @@
     height: 100vh;
 }
 
-.footer {
-    position: absolute;
-    bottom: 5px;
-    right: 30px;
-    font-size: 12px;
-}
-
-.footer img, .footer p {
-    display: inline;
-    height: 12px;
-}
 
 @media only screen 
 and (min-device-width: 375px)
@@ -156,13 +147,18 @@ and (max-device-width: 812px) {
 
     .header {
         width: auto;
-        flex-flow: column;
+        flex-flow: row;
         align-items: start;
     }
 
-    .header-bio {
-        margin: 5px;
+    .header-photo {
+        border: 1px solid white;
+        height: 15vw;
+        width: 15vw;
+    }
 
+    .header-bio {
+        margin: 10px;
         display: flex;
         flex-flow: column;
     }
@@ -217,12 +213,14 @@ and (max-device-width: 812px) {
     }
 
     .projects {
+        display: flex;
         flex-flow: column;
     }
 
     .project-card {
         padding: 15px 0;
         display: flex;
+        flex-flow: row;
         justify-content: space-evenly;
     }
 

@@ -29,11 +29,6 @@ function App() {
         <Header />
         <Navbar navi={navi} setNav={setNav} />
         {render}
-        <div className='footer'>
-        <p>Site created with: React </p>
-        <img src='./stackLogos/reactLogo.png' />
-
-        </div>
         </div>
     );
 }
