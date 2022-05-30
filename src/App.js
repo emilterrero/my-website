@@ -1,25 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
+import Header from './components/Header.js';
+import Navbar from './components/Navbar.js';
+import About from './components/About.js';
+import Projects from './components/Project.js';
+import Resume from './components/Resume.js';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let [navi, setNav] = useState('');
+
+    let render;
+
+    switch(navi) {
+        case 'about-me':
+            render = <About />;
+            break; 
+        case 'projects':
+            render = <Projects />;
+            break;
+        case 'resume':
+            render = <Resume />
+                break;
+    }
+
+    return (
+        <div className="App">
+
+        <Header />
+        <Navbar navi={navi} setNav={setNav} />
+        {render}
+        <div className='footer'>
+        <p>Site created with: React </p>
+        <img src='./stackLogos/reactLogo.png' />
+
+        </div>
+        </div>
+    );
 }
 
 export default App;

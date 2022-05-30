@@ -1,38 +1,253 @@
+* {
+    margin: 0;
+    font-family: 'DM mono', monospace;
+    transition: .8s;
+}
+
 .App {
-  text-align: center;
+    position: relative;
+    background-color: #001429;
+    color: white;
+    padding: 10px 0;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-photo {
+    width: 10vw;
+    max-width: 125px;
+    border-radius: 100%;
+    border: solid 5px white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.line {
+    background-color: white;
+    height: 1px;
+    width: 325px;
+    margin: 5px 0;
+    border-radius: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.header-bio {
+    display: inline-block;
+    margin: 20px;
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+    width: 100vw;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 20px;
+}
+
+.navbar button {
+    border-style: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    color: white;
+    background-color: #001429;
+    border-radius: 15px; 
+}
+
+.navbar button:hover {
+    cursor: pointer;
+    background-color: #003366;
+}
+
+.navbar button:active {
+    padding: 20px;
+}
+
+.icon {
+    height: 20px;
+}
+
+.about-me {
+    width: 50vw;
+    min-width: 500px;
+    text-align: center;
+
+}
+
+.tech-stack img {
+    height: 50px;
+    background-color: white;
+    border-radius: 20%;
+    margin: 20px 10px;
+    padding: 5px;
+}
+
+.projects {
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project-card {
+    height: 25vw;
+}
+
+.project-info h3 {
+    text-decoration: underline;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.project-info p {
+    font-size: 12px;
+    width: 30vw;
+}
+
+.projects img {
+    height: 25vw;
+}
+
+.projects img:hover {
+    opacity: .6;
+}
+
+.file {
+    width: 750px;
+    height: 100vh;
+}
+
+.footer {
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+    font-size: 12px;
+}
+
+.footer img, .footer p {
+    display: inline;
+    height: 12px;
+}
+
+@media only screen 
+and (min-device-width: 375px)
+and (max-device-width: 812px) {
+
+    .App {
+        justify-content: flex-start;
+        width: 100vw;
+    }
+
+    .header {
+        width: auto;
+        flex-flow: column;
+        align-items: start;
+    }
+
+    .header-bio {
+        margin: 5px;
+
+        display: flex;
+        flex-flow: column;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .line {
+        width: 150px;
+    }
+
+    .title {
+        font-size: 10px;
+    }
+
+    .navbar {
+        width: auto;
+    }
+
+    .navbar ul {
+        justify-content: center;
+    }
+
+    .navbar li, .navbar button {
+        margin: 5px;
+        padding: 5px 0;
+    }
+
+    .navbar button {
+        font-size: 10px;
+    }
+
+    .icon {
+        padding: 10px 0;
+        height: 15px;
+    }
+
+    .about-me {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .about-me p {
+        font-size: 8px;
+        width: 80vw;
+    }
+
+    .tech-stack img {
+        height: 30px;
+    }
+
+    .projects {
+        flex-flow: column;
+    }
+
+    .project-card {
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .project-info {
+        width: 50vw;
+    }
+
+    .project-info p {
+        width: 50vw;
+    }
+
+    .project-card h3 {
+        font-size: 12px;
+    }
+
+    .project-card p {
+        font-size: 8px;
+    }
+
+    .file {
+        width: 90vw;
+    }
+
+    .footer {
+        display: none;
+    }
+
 }
