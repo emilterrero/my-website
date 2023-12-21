@@ -37,6 +37,13 @@ function Projects() {
         </div>
         </div>
 
+        <div className='project-card'>
+        <a href='https://codesandbox.io/p/sandbox/image-slider-bis23-49nf6z' target='_blank'><img src='./stackLogos/imgSldr.png' /></a>
+        <div className='project-info'>
+        <h3>Image Slider for BIS23 Class</h3>
+        <p>This was an assignment apart of my Client-Side Programming class. The purpose of this assignment is to display by basic understanding of JavaScript web development fundamentals. I decided to make it fun by referencing a vacation I really enjoyed.</p> 
+        </div>
+        </div>
 
         </div>
     )
